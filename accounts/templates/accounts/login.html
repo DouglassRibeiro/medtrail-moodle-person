@@ -1,4 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{{% block content %}
+<div class="-z-10 absolute inset-0 bg-cover bg-center bg-no-repeat blur-sm scale-105" 
+style="background-image: url('{% static 'core/img/Image_2ljwx32ljwx32ljw.webp' %}');"> 
+</div>
 <form class="flex flex-col items-center justify-center w-96 h-96" action="" method="">
     <input class="bg-white m-6" type="text" name="none" placeholder="Digite seu nome">
     <input type="number" name="idade" placeholder="Digite sua idade">
 </form>
+{% endblock %}}
