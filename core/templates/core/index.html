@@ -9,8 +9,8 @@
   </div>
   <section class="relative p-8 grid place-items-center h-screen">
     <div class="lg:flex sm:flex grid p-4 rounded-2xl min-w-auto min-h-auto">
-      <a href="{% url 'accounts:login' %}"  class="lg:mr-20 mb-10 sm:mr-10 sm:mb-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:shadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300">Entrar</a>
-      <a href="{% url 'accounts:register' %}" class="lg:ml-20 mt-10 sm:ml-10 sm:mt-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:hadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300">Registrar</a>
+            <a href="{% url 'accounts:login' %}"  class="lg:mr-20 mb-10 sm:mr-10 sm:mb-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:shadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300">Entrar</a>
+      <a href="{% url 'accounts:register' %}" hx-target="#main-content" hx-swap="innerHTML settle:300ms" class="lg:ml-20 mt-10 sm:ml-10 sm:mt-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:hadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300">Registrar</a>
     </div>
   </section>
   

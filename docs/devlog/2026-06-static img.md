@@ -12,4 +12,4 @@ Porém já que não é possiivel fazer isso diretamente na class="" adicione a p
 </div>
 ```
 
-há! .webp é mais leve.
+há! img .webp é mais leve.

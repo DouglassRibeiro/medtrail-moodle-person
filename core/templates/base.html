@@ -11,32 +11,10 @@
     <script src="{% static 'js/htmx.min.js' %}"></script>
 </head>
 
-<body>
-    <!-- Indicador de carregamento inicial da página -->
-    <div id="page-loader"
-        class="fixed inset-0 bg-black flex justify-center items-center z-9999 text-white text-3xl font-bold transition-opacity duration-300 ease-in-out opacity-100">
-        Carregando...
+<body {% if HTMX_ENABLED %}class="htmx-enabled"{% endif %}> {# Opcional: Adiciona uma classe para estilização ou JS #}
+    <div id="main-content" {% if HTMX_ENABLED %}hx-boost="true" hx-target="#main-content" hx-swap="innerHTML settle:300ms"{% endif %}>
+        {% block content %} {% endblock %}
     </div>
 
-
-    {% block content %} {% endblock %}
-
-    <script>
-        // Esconde o indicador de carregamento inicial quando a página estiver totalmente carregada
-        window.addEventListener('load', function () {
-            const pageLoader = document.getElementById('page-loader');
-            setTimeout(() => {
-                pageLoader.classList.remove('opacity-100');
-                pageLoader.classList.add('opacity-0', 'pointer-events-none');
-            }, 300);
-
-
-        });
-        document.body.addEventListener('htmx:beforeSwap', function (evt) {
-            // Se quiser aplicar transições nativas do HTMX nas trocas de elementos,
-            // este evento garante que a resposta aguarde animações se configurado no elemento via hx-swap="innerHTML settle:300ms"
-        });
-    </script>
 </body>
-
 </html>
