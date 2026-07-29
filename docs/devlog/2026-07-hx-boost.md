@@ -24,7 +24,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
-                'config.context_processors.htmx_context', # Adicione esta linha
+                'config.context_processors.htmx_context', # Adicione esta linha informando o novo processador de contexto ao django
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],

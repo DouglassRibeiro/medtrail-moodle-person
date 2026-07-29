@@ -63,7 +63,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
-                'config.context_processors.htmx_context', # Adicione esta linha
+                'config.context_processors.htmx_context', # Opçãp para definir parte do HTMX entre os processos necessarios 
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -128,4 +128,4 @@ STATICFILES_DIRS = [
 ]
 
 # HTMX Configuration
-HTMX_ENABLED = True # Defina como False para desativar o HTMX globalmente e forçar recarregamentos completos
+HTMX_ENABLED = True # Defina como False para desativar o HTMX globalmente e volta a forçar recarregamentos completos
