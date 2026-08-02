@@ -32,7 +32,5 @@
     <div id="main-content">
         {% block content %} {% endblock %}
     </div>
-
 </body>
 </html>
-```

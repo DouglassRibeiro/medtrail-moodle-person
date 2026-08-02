@@ -9,12 +9,20 @@
   </div>
   <section class="relative p-8 grid place-items-center h-screen">
     <div class="lg:flex sm:flex grid p-4 rounded-2xl min-w-auto min-h-auto">
-      <a href="{% url 'accounts:login' %}"
-        class="lg:mr-20 mb-10 sm:mr-10 sm:mb-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:shadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300">Entr</a>
-      <a href="{% url 'accounts:register' %}"
-        class="lg:mr-20 mb-10 sm:mr-10 sm:mb-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:shadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300">Registrar</a>
+      <a hx-get="{% url 'accounts:login' %}" hx-target="#modal-container" hx-swap="innerHTML swap:1s"
+        class="lg:mr-20 mb-10 sm:mr-10 sm:mb-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:shadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300 cursor-pointer">
+        Entrar
+      </a>
+
+      <a hx-get="{% url 'accounts:register' %}" hx-target="#modal-container" hx-swap="innerHTML"
+        class="lg:mr-20 mb-10 sm:mr-10 sm:mb-0 lg:m-0 text-center content-center text-white border-0 p-4 rounded-2xl w-40 h-20 font-bold backdrop-blur-3xl shadow-[0px_0px_16px_8px_rgba(0,0,0,0.50)] hover:shadow-[0px_0px_16px_8px_rgba(0,0,0,0.80)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300 cursor-pointer">
+        Registrar
+      </a>
     </div>
   </section>
+
+  <!-- Container para receber o Pop-up -->
+  <div id="modal-container"></div>
 
 </main>
 {% endblock %}
